@@ -1,0 +1,86 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOUhu4IkF6WFuW1P4kWy+Gx",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp-16\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 18,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QRtdsT6I0Iuk",
+        "outputId": "e320d2e3-7213-43f8-ee27-f1d24b81f07a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Initial State: {'A': 'Dirty', 'B': 'Dirty'}\n",
+            "Vacuum cleans Room A\n",
+            "Vacuum moves to Room B\n",
+            "Vacuum cleans Room B\n",
+            "Final State: {'A': 'Clean', 'B': 'Clean'}\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Python program for Vacuum Cleaner Problem\n",
+        "\n",
+        "def vacuum_cleaner():\n",
+        "    room = {\n",
+        "        \"A\": \"Dirty\",\n",
+        "        \"B\": \"Dirty\"\n",
+        "    }\n",
+        "\n",
+        "    position = \"A\"\n",
+        "\n",
+        "    print(\"Initial State:\", room)\n",
+        "\n",
+        "    # Clean Room A\n",
+        "    if room[\"A\"] == \"Dirty\":\n",
+        "        print(\"Vacuum cleans Room A\")\n",
+        "        room[\"A\"] = \"Clean\"\n",
+        "\n",
+        "    # Move to Room B\n",
+        "    position = \"B\"\n",
+        "    print(\"Vacuum moves to Room B\")\n",
+        "\n",
+        "    # Clean Room B\n",
+        "    if room[\"B\"] == \"Dirty\":\n",
+        "        print(\"Vacuum cleans Room B\")\n",
+        "        room[\"B\"] = \"Clean\"\n",
+        "\n",
+        "    print(\"Final State:\", room)\n",
+        "\n",
+        "\n",
+        "vacuum_cleaner()"
+      ]
+    }
+  ]
+}
