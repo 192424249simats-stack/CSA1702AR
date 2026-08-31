@@ -1,0 +1,90 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOCU1e2im9f/0yDx5Nqf5E0",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp-1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QRtdsT6I0Iuk",
+        "outputId": "ffcc4108-2184-4ab1-b121-c62cbedea442"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Simple Calculator\n",
+            "1. Addition\n",
+            "2. Subtraction\n",
+            "3. Multiplication\n",
+            "4. Division\n",
+            "Enter your choice (1/2/3/4): 1\n",
+            "Enter first number: 2\n",
+            "Enter second number: 3\n",
+            "Result = 5.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Simple Calculator Program\n",
+        "\n",
+        "print(\"Simple Calculator\")\n",
+        "print(\"1. Addition\")\n",
+        "print(\"2. Subtraction\")\n",
+        "print(\"3. Multiplication\")\n",
+        "print(\"4. Division\")\n",
+        "\n",
+        "choice = input(\"Enter your choice (1/2/3/4): \")\n",
+        "\n",
+        "num1 = float(input(\"Enter first number: \"))\n",
+        "num2 = float(input(\"Enter second number: \"))\n",
+        "\n",
+        "if choice == '1':\n",
+        "    print(\"Result =\", num1 + num2)\n",
+        "\n",
+        "elif choice == '2':\n",
+        "    print(\"Result =\", num1 - num2)\n",
+        "\n",
+        "elif choice == '3':\n",
+        "    print(\"Result =\", num1 * num2)\n",
+        "\n",
+        "elif choice == '4':\n",
+        "    if num2 != 0:\n",
+        "        print(\"Result =\", num1 / num2)\n",
+        "    else:\n",
+        "        print(\"Error! Division by zero is not allowed.\")\n",
+        "\n",
+        "else:\n",
+        "    print(\"Invalid choice! Please select 1, 2, 3, or 4.\")\n"
+      ]
+    }
+  ]
+}
