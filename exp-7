@@ -1,0 +1,93 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOqaA+daDnwrKiVaviYACBv",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp-7\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 9,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QRtdsT6I0Iuk",
+        "outputId": "0045e9bf-ef82-41cc-a877-277ff9d3ff41"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Set 1: {40, 10, 20, 30}\n",
+            "Set 2: {40, 50, 60, 30}\n",
+            "Union: {40, 10, 50, 20, 60, 30}\n",
+            "Intersection: {40, 30}\n",
+            "Difference (Set1 - Set2): {10, 20}\n",
+            "Difference (Set2 - Set1): {50, 60}\n",
+            "Symmetric Difference: {10, 50, 20, 60}\n",
+            "Is 20 present in Set1? True\n",
+            "Is Set1 a subset of Set2? False\n",
+            "Is Set1 a superset of Set2? False\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Python program to illustrate different Set Operations\n",
+        "\n",
+        "# Creating two sets\n",
+        "set1 = {10, 20, 30, 40}\n",
+        "set2 = {30, 40, 50, 60}\n",
+        "\n",
+        "print(\"Set 1:\", set1)\n",
+        "print(\"Set 2:\", set2)\n",
+        "\n",
+        "# 1. Union\n",
+        "print(\"Union:\", set1 | set2)\n",
+        "\n",
+        "# 2. Intersection\n",
+        "print(\"Intersection:\", set1 & set2)\n",
+        "\n",
+        "# 3. Difference\n",
+        "print(\"Difference (Set1 - Set2):\", set1 - set2)\n",
+        "\n",
+        "# 4. Difference\n",
+        "print(\"Difference (Set2 - Set1):\", set2 - set1)\n",
+        "\n",
+        "# 5. Symmetric Difference\n",
+        "print(\"Symmetric Difference:\", set1 ^ set2)\n",
+        "\n",
+        "# 6. Membership\n",
+        "print(\"Is 20 present in Set1?\", 20 in set1)\n",
+        "\n",
+        "# 7. Subset\n",
+        "print(\"Is Set1 a subset of Set2?\", set1.issubset(set2))\n",
+        "\n",
+        "# 8. Superset\n",
+        "print(\"Is Set1 a superset of Set2?\", set1.issuperset(set2))"
+      ]
+    }
+  ]
+}
