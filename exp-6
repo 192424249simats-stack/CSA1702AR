@@ -1,0 +1,104 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN+GAIutUuyqdR2iVIFUCd6",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp-6\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 7,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QRtdsT6I0Iuk",
+        "outputId": "d0b8d6e6-b01f-4523-bda6-239e019baed2"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original List: [10, 20, 30]\n",
+            "After Add: [10, 15, 20, 30]\n",
+            "After Append: [10, 15, 20, 30, 40]\n",
+            "After Extend: [10, 15, 20, 30, 40, 50, 60]\n",
+            "After Delete: [10, 15, 30, 40, 50, 60]\n",
+            "Original List: [10, 20, 30]\n",
+            "After Add: [10, 15, 20, 30]\n",
+            "After Append: [10, 15, 20, 30, 40]\n",
+            "After Extend: [10, 15, 20, 30, 40, 50, 60]\n",
+            "After Delete: [10, 15, 30, 40, 50, 60]\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Python program to implement List methods\n",
+        "\n",
+        "# Create a list\n",
+        "my_list = [10, 20, 30]\n",
+        "\n",
+        "print(\"Original List:\", my_list)\n",
+        "\n",
+        "# Add - using insert()\n",
+        "my_list.insert(1, 15)\n",
+        "print(\"After Add:\", my_list)\n",
+        "\n",
+        "# Append - adds an element at the end\n",
+        "my_list.append(40)\n",
+        "print(\"After Append:\", my_list)\n",
+        "\n",
+        "# Extend - adds multiple elements\n",
+        "my_list.extend([50, 60])\n",
+        "print(\"After Extend:\", my_list)\n",
+        "\n",
+        "# Delete - using remove()\n",
+        "my_list.remove(20)\n",
+        "print(\"After Delete:\", my_list)# Python program to implement List methods\n",
+        "\n",
+        "# Create a list\n",
+        "my_list = [10, 20, 30]\n",
+        "\n",
+        "print(\"Original List:\", my_list)\n",
+        "\n",
+        "# Add - using insert()\n",
+        "my_list.insert(1, 15)\n",
+        "print(\"After Add:\", my_list)\n",
+        "\n",
+        "# Append - adds an element at the end\n",
+        "my_list.append(40)\n",
+        "print(\"After Append:\", my_list)\n",
+        "\n",
+        "# Extend - adds multiple elements\n",
+        "my_list.extend([50, 60])\n",
+        "print(\"After Extend:\", my_list)\n",
+        "\n",
+        "# Delete - using remove()\n",
+        "my_list.remove(20)\n",
+        "print(\"After Delete:\", my_list)"
+      ]
+    }
+  ]
+}
