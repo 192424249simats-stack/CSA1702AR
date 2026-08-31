@@ -1,0 +1,84 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNjOGaoTosHwsUA2u7IzUDJ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp-3\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QRtdsT6I0Iuk",
+        "outputId": "0cb68b40-ab9f-43ed-e4b9-bd8509cdf4ac"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Original Matrix:\n",
+            "[1, 2, 3]\n",
+            "[4, 5, 6]\n",
+            "Transpose Matrix:\n",
+            "[1, 4]\n",
+            "[2, 5]\n",
+            "[3, 6]\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Python program to Transpose a Matrix\n",
+        "\n",
+        "# Define a matrix\n",
+        "matrix = [\n",
+        "    [1, 2, 3],\n",
+        "    [4, 5, 6]\n",
+        "]\n",
+        "\n",
+        "# Find transpose\n",
+        "transpose = []\n",
+        "\n",
+        "for i in range(3):\n",
+        "    row = []\n",
+        "    for j in range(2):\n",
+        "        row.append(matrix[j][i])\n",
+        "    transpose.append(row)\n",
+        "\n",
+        "# Display the original matrix\n",
+        "print(\"Original Matrix:\")\n",
+        "for row in matrix:\n",
+        "    print(row)\n",
+        "\n",
+        "# Display the transpose\n",
+        "print(\"Transpose Matrix:\")\n",
+        "for row in transpose:\n",
+        "    print(row)"
+      ]
+    }
+  ]
+}
