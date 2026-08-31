@@ -1,0 +1,172 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPcsZHaThIi4m4lSMF44OEt",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp-10\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 12,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 391
+        },
+        "id": "QRtdsT6I0Iuk",
+        "outputId": "43a75259-c62a-44b2-a4a1-2718b001751b"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter the initial state (use 0 for blank):\n",
+            "1\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "IndexError",
+          "evalue": "tuple index out of range",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mIndexError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipykernel_1656/3885565858.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     89\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     90\u001b[0m \u001b[0;31m# Solve the puzzle\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 91\u001b[0;31m \u001b[0msolution\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0msolve\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mstart\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     92\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     93\u001b[0m \u001b[0;31m# Display solution\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/tmp/ipykernel_1656/3885565858.py\u001b[0m in \u001b[0;36msolve\u001b[0;34m(start)\u001b[0m\n\u001b[1;32m     53\u001b[0m     \u001b[0mpriority_queue\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     54\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 55\u001b[0;31m     \u001b[0mheappush\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mpriority_queue\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mheuristic\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mstart\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mstart\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m[\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     56\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     57\u001b[0m     \u001b[0mvisited\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mset\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/tmp/ipykernel_1656/3885565858.py\u001b[0m in \u001b[0;36mheuristic\u001b[0;34m(state)\u001b[0m\n\u001b[1;32m     13\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     14\u001b[0m     \u001b[0;32mfor\u001b[0m \u001b[0mi\u001b[0m \u001b[0;32min\u001b[0m \u001b[0mrange\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m9\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 15\u001b[0;31m         \u001b[0;32mif\u001b[0m \u001b[0mstate\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mi\u001b[0m\u001b[0;34m]\u001b[0m \u001b[0;34m!=\u001b[0m \u001b[0;36m0\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     16\u001b[0m             \u001b[0mgoal_pos\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mgoal\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mindex\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mstate\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mi\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     17\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mIndexError\u001b[0m: tuple index out of range"
+          ]
+        }
+      ],
+      "source": [
+        "# Python program to solve 8-Puzzle problem using A* Algorithm\n",
+        "\n",
+        "from heapq import heappush, heappop\n",
+        "\n",
+        "# Goal state\n",
+        "goal = (1, 2, 3,\n",
+        "        4, 5, 6,\n",
+        "        7, 8, 0)\n",
+        "\n",
+        "# Calculate Manhattan distance\n",
+        "def heuristic(state):\n",
+        "    distance = 0\n",
+        "\n",
+        "    for i in range(9):\n",
+        "        if state[i] != 0:\n",
+        "            goal_pos = goal.index(state[i])\n",
+        "\n",
+        "            row1, col1 = divmod(i, 3)\n",
+        "            row2, col2 = divmod(goal_pos, 3)\n",
+        "\n",
+        "            distance += abs(row1 - row2) + abs(col1 - col2)\n",
+        "\n",
+        "    return distance\n",
+        "\n",
+        "\n",
+        "# Generate possible moves\n",
+        "def get_neighbors(state):\n",
+        "    neighbors = []\n",
+        "\n",
+        "    zero = state.index(0)\n",
+        "    row, col = divmod(zero, 3)\n",
+        "\n",
+        "    moves = [(-1, 0), (1, 0), (0, -1), (0, 1)]\n",
+        "\n",
+        "    for dr, dc in moves:\n",
+        "        new_row = row + dr\n",
+        "        new_col = col + dc\n",
+        "\n",
+        "        if 0 <= new_row < 3 and 0 <= new_col < 3:\n",
+        "            new_zero = new_row * 3 + new_col\n",
+        "\n",
+        "            new_state = list(state)\n",
+        "            new_state[zero], new_state[new_zero] = \\\n",
+        "                new_state[new_zero], new_state[zero]\n",
+        "\n",
+        "            neighbors.append(tuple(new_state))\n",
+        "\n",
+        "    return neighbors\n",
+        "\n",
+        "\n",
+        "# A* search\n",
+        "def solve(start):\n",
+        "    priority_queue = []\n",
+        "\n",
+        "    heappush(priority_queue, (heuristic(start), 0, start, []))\n",
+        "\n",
+        "    visited = set()\n",
+        "\n",
+        "    while priority_queue:\n",
+        "        f, cost, state, path = heappop(priority_queue)\n",
+        "\n",
+        "        if state in visited:\n",
+        "            continue\n",
+        "\n",
+        "        visited.add(state)\n",
+        "\n",
+        "        new_path = path + [state]\n",
+        "\n",
+        "        if state == goal:\n",
+        "            return new_path\n",
+        "\n",
+        "        for neighbor in get_neighbors(state):\n",
+        "            if neighbor not in visited:\n",
+        "                new_cost = cost + 1\n",
+        "                new_f = new_cost + heuristic(neighbor)\n",
+        "\n",
+        "                heappush(\n",
+        "                    priority_queue,\n",
+        "                    (new_f, new_cost, neighbor, new_path)\n",
+        "                )\n",
+        "\n",
+        "    return None\n",
+        "\n",
+        "\n",
+        "# Get input from user\n",
+        "print(\"Enter the initial state (use 0 for blank):\")\n",
+        "\n",
+        "start = tuple(map(int, input().split()))\n",
+        "\n",
+        "# Solve the puzzle\n",
+        "solution = solve(start)\n",
+        "\n",
+        "# Display solution\n",
+        "if solution:\n",
+        "    print(\"\\nSolution found!\")\n",
+        "    print(\"Number of moves:\", len(solution) - 1)\n",
+        "\n",
+        "    for step, state in enumerate(solution):\n",
+        "        print(\"\\nStep\", step)\n",
+        "\n",
+        "        for i in range(0, 9, 3):\n",
+        "            print(state[i], state[i + 1], state[i + 2])\n",
+        "else:\n",
+        "    print(\"No solution exists.\")1\n",
+        ""
+      ]
+    }
+  ]
+}
