@@ -1,0 +1,76 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOuGtD1J3ohF22+yaA29SU5",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp_8\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 356
+        },
+        "id": "9i7C0AKvCn54",
+        "outputId": "6198b02e-596c-4952-cbea-a761cdcc91cb"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter year: 2007\n",
+            "Enter month (1-12): 2008\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "IllegalMonthError",
+          "evalue": "bad month number 2008; must be 1-12",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mIllegalMonthError\u001b[0m                         Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipykernel_594/2891862561.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      7\u001b[0m \u001b[0;31m# Display calendar\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 8\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"\\n\"\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mcalendar\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mmonth\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0myear\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmonth\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;32m/usr/lib/python3.13/calendar.py\u001b[0m in \u001b[0;36mformatmonth\u001b[0;34m(self, theyear, themonth, w, l)\u001b[0m\n\u001b[1;32m    395\u001b[0m         \u001b[0mw\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mmax\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m2\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mw\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    396\u001b[0m         \u001b[0ml\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mmax\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0ml\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 397\u001b[0;31m         \u001b[0ms\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mself\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mformatmonthname\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mtheyear\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mthemonth\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m7\u001b[0m \u001b[0;34m*\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mw\u001b[0m \u001b[0;34m+\u001b[0m \u001b[0;36m1\u001b[0m\u001b[0;34m)\u001b[0m \u001b[0;34m-\u001b[0m \u001b[0;36m1\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    398\u001b[0m         \u001b[0ms\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0ms\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mrstrip\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    399\u001b[0m         \u001b[0ms\u001b[0m \u001b[0;34m+=\u001b[0m \u001b[0;34m'\\n'\u001b[0m \u001b[0;34m*\u001b[0m \u001b[0ml\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/lib/python3.13/calendar.py\u001b[0m in \u001b[0;36mformatmonthname\u001b[0;34m(self, theyear, themonth, width, withyear)\u001b[0m\n\u001b[1;32m    376\u001b[0m         \u001b[0mReturn\u001b[0m \u001b[0ma\u001b[0m \u001b[0mformatted\u001b[0m \u001b[0mmonth\u001b[0m \u001b[0mname\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    377\u001b[0m         \"\"\"\n\u001b[0;32m--> 378\u001b[0;31m         \u001b[0m_validate_month\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mthemonth\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    379\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    380\u001b[0m         \u001b[0ms\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mmonth_name\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0mthemonth\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;32m/usr/lib/python3.13/calendar.py\u001b[0m in \u001b[0;36m_validate_month\u001b[0;34m(month)\u001b[0m\n\u001b[1;32m    163\u001b[0m \u001b[0;32mdef\u001b[0m \u001b[0m_validate_month\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmonth\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    164\u001b[0m     \u001b[0;32mif\u001b[0m \u001b[0;32mnot\u001b[0m \u001b[0;36m1\u001b[0m \u001b[0;34m<=\u001b[0m \u001b[0mmonth\u001b[0m \u001b[0;34m<=\u001b[0m \u001b[0;36m12\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 165\u001b[0;31m         \u001b[0;32mraise\u001b[0m \u001b[0mIllegalMonthError\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmonth\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    166\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    167\u001b[0m \u001b[0;32mdef\u001b[0m \u001b[0mmonthrange\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0myear\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmonth\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mIllegalMonthError\u001b[0m: bad month number 2008; must be 1-12"
+          ]
+        }
+      ],
+      "source": [
+        "import calendar\n",
+        "\n",
+        "# Input from user\n",
+        "year = int(input(\"Enter year: \"))\n",
+        "month = int(input(\"Enter month (1-12): \"))\n",
+        "\n",
+        "# Display calendar\n",
+        "print(\"\\n\", calendar.month(year, month))"
+      ]
+    }
+  ]
+}
