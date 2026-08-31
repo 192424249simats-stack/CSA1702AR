@@ -1,0 +1,77 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNqEtGTCxDtYM858gY/Qxwb",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp-18\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 20,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QRtdsT6I0Iuk",
+        "outputId": "3127da3d-d8d9-48b1-ff40-a3aafecdb55d"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "DFS Traversal:\n",
+            "A B D E C F "
+          ]
+        }
+      ],
+      "source": [
+        "# Python program to implement DFS\n",
+        "\n",
+        "graph = {\n",
+        "    'A': ['B', 'C'],\n",
+        "    'B': ['D', 'E'],\n",
+        "    'C': ['F'],\n",
+        "    'D': [],\n",
+        "    'E': [],\n",
+        "    'F': []\n",
+        "}\n",
+        "\n",
+        "visited = set()\n",
+        "\n",
+        "def dfs(node):\n",
+        "    if node not in visited:\n",
+        "        print(node, end=\" \")\n",
+        "        visited.add(node)\n",
+        "\n",
+        "        for neighbor in graph[node]:\n",
+        "            dfs(neighbor)\n",
+        "\n",
+        "\n",
+        "print(\"DFS Traversal:\")\n",
+        "dfs('A')"
+      ]
+    }
+  ]
+}
