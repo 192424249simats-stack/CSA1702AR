@@ -1,0 +1,118 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNdcqoxR5GQv9AqwVNJZW0u",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp-12\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 14,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 228
+        },
+        "id": "QRtdsT6I0Iuk",
+        "outputId": "bb743bdf-239e-44e4-8251-e36afe3c66fe"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter capacity of Jug 1: `1:4\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "ValueError",
+          "evalue": "invalid literal for int() with base 10: '`1:4'",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mValueError\u001b[0m                                Traceback (most recent call last)",
+            "\u001b[0;32m/tmp/ipykernel_1656/895878626.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     47\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     48\u001b[0m \u001b[0;31m# Input\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 49\u001b[0;31m \u001b[0mcapacity1\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Enter capacity of Jug 1: \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     50\u001b[0m \u001b[0mcapacity2\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Enter capacity of Jug 2: \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     51\u001b[0m \u001b[0mtarget\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0minput\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m\"Enter target amount: \"\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mValueError\u001b[0m: invalid literal for int() with base 10: '`1:4'"
+          ]
+        }
+      ],
+      "source": [
+        "# Python program for Water Jug Problem\n",
+        "\n",
+        "from collections import deque\n",
+        "\n",
+        "def water_jug(capacity1, capacity2, target):\n",
+        "\n",
+        "    queue = deque()\n",
+        "    visited = set()\n",
+        "\n",
+        "    # Initial state\n",
+        "    queue.append((0, 0))\n",
+        "    visited.add((0, 0))\n",
+        "\n",
+        "    while queue:\n",
+        "        jug1, jug2 = queue.popleft()\n",
+        "\n",
+        "        # Check whether target is reached\n",
+        "        if jug1 == target or jug2 == target:\n",
+        "            print(\"Solution found:\")\n",
+        "            print(\"Jug 1 =\", jug1, \"Jug 2 =\", jug2)\n",
+        "            return\n",
+        "\n",
+        "        # Possible operations\n",
+        "        states = [\n",
+        "            (capacity1, jug2),  # Fill Jug 1\n",
+        "            (jug1, capacity2),  # Fill Jug 2\n",
+        "            (0, jug2),          # Empty Jug 1\n",
+        "            (jug1, 0),          # Empty Jug 2\n",
+        "        ]\n",
+        "\n",
+        "        # Pour Jug 1 into Jug 2\n",
+        "        amount = min(jug1, capacity2 - jug2)\n",
+        "        states.append((jug1 - amount, jug2 + amount))\n",
+        "\n",
+        "        # Pour Jug 2 into Jug 1\n",
+        "        amount = min(jug2, capacity1 - jug1)\n",
+        "        states.append((jug1 + amount, jug2 - amount))\n",
+        "\n",
+        "        # Add new states to the queue\n",
+        "        for state in states:\n",
+        "            if state not in visited:\n",
+        "                visited.add(state)\n",
+        "                queue.append(state)\n",
+        "\n",
+        "    print(\"No solution exists.\")\n",
+        "\n",
+        "\n",
+        "# Input\n",
+        "capacity1 = int(input(\"Enter capacity of Jug 1: \"))\n",
+        "capacity2 = int(input(\"Enter capacity of Jug 2: \"))\n",
+        "target = int(input(\"Enter target amount: \"))\n",
+        "\n",
+        "# Solve\n",
+        "water_jug(capacity1, capacity2, target)"
+      ]
+    }
+  ]
+}
