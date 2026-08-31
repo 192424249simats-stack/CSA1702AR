@@ -1,0 +1,84 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP7YUSkRUB5AknRSYoJ3yDf",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp-2\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QRtdsT6I0Iuk",
+        "outputId": "100bdaed-b784-499b-ece7-717f32369727"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Resultant Matrix:\n",
+            "[6, 8]\n",
+            "[10, 12]\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Python program to Add Two Matrices\n",
+        "\n",
+        "# First matrix\n",
+        "A = [\n",
+        "    [1, 2],\n",
+        "    [3, 4]\n",
+        "]\n",
+        "\n",
+        "# Second matrix\n",
+        "B = [\n",
+        "    [5, 6],\n",
+        "    [7, 8]\n",
+        "]\n",
+        "\n",
+        "# Create an empty matrix for the result\n",
+        "result = [\n",
+        "    [0, 0],\n",
+        "    [0, 0]\n",
+        "]\n",
+        "\n",
+        "# Add the matrices\n",
+        "for i in range(2):\n",
+        "    for j in range(2):\n",
+        "        result[i][j] = A[i][j] + B[i][j]\n",
+        "\n",
+        "# Display the result\n",
+        "print(\"Resultant Matrix:\")\n",
+        "\n",
+        "for row in result:\n",
+        "    print(row)"
+      ]
+    }
+  ]
+}
