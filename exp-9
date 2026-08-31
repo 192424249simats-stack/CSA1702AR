@@ -1,0 +1,69 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO4HaptSZGF9D5wl3Te6vbW",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp-9\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 11,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QRtdsT6I0Iuk",
+        "outputId": "0f78c184-6037-411f-9d8b-860c290527c0"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a string: hello\n",
+            "String after removing punctuations: hello\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Python program to remove punctuations from a string\n",
+        "\n",
+        "import string\n",
+        "\n",
+        "# Get input from the user\n",
+        "text = input(\"Enter a string: \")\n",
+        "\n",
+        "# Remove punctuation\n",
+        "result = \"\"\n",
+        "\n",
+        "for char in text:\n",
+        "    if char not in string.punctuation:\n",
+        "        result = result + char\n",
+        "\n",
+        "# Display the result\n",
+        "print(\"String after removing punctuations:\", result)"
+      ]
+    }
+  ]
+}
