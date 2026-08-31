@@ -1,0 +1,121 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMH6dsUejkrNjPL3VCAJ3p7",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp-11\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 13,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QRtdsT6I0Iuk",
+        "outputId": "c18a5b9f-02a3-40b6-95dd-ad9db06fe190"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Solution for 8-Queen Problem:\n",
+            "\n",
+            "Q . . . . . . . \n",
+            ". . . . Q . . . \n",
+            ". . . . . . . Q \n",
+            ". . . . . Q . . \n",
+            ". . Q . . . . . \n",
+            ". . . . . . Q . \n",
+            ". Q . . . . . . \n",
+            ". . . Q . . . . \n"
+          ]
+        }
+      ],
+      "source": [
+        "# Python program to solve 8-Queen Problem\n",
+        "\n",
+        "N = 8\n",
+        "\n",
+        "# Function to check whether a queen can be placed\n",
+        "def is_safe(board, row, col):\n",
+        "\n",
+        "    # Check the column\n",
+        "    for i in range(row):\n",
+        "        if board[i] == col:\n",
+        "            return False\n",
+        "\n",
+        "    # Check the left diagonal\n",
+        "    for i in range(row):\n",
+        "        if abs(board[i] - col) == abs(i - row):\n",
+        "            return False\n",
+        "\n",
+        "    return True\n",
+        "\n",
+        "\n",
+        "# Function to solve the problem\n",
+        "def solve(board, row):\n",
+        "\n",
+        "    # If all queens are placed\n",
+        "    if row == N:\n",
+        "        return True\n",
+        "\n",
+        "    # Try placing queen in each column\n",
+        "    for col in range(N):\n",
+        "\n",
+        "        if is_safe(board, row, col):\n",
+        "            board[row] = col\n",
+        "\n",
+        "            if solve(board, row + 1):\n",
+        "                return True\n",
+        "\n",
+        "            # Backtrack\n",
+        "            board[row] = -1\n",
+        "\n",
+        "    return False\n",
+        "\n",
+        "\n",
+        "# Create the board\n",
+        "board = [-1] * N\n",
+        "\n",
+        "# Solve the problem\n",
+        "if solve(board, 0):\n",
+        "\n",
+        "    print(\"Solution for 8-Queen Problem:\\n\")\n",
+        "\n",
+        "    for row in range(N):\n",
+        "        for col in range(N):\n",
+        "            if board[row] == col:\n",
+        "                print(\"Q\", end=\" \")\n",
+        "            else:\n",
+        "                print(\".\", end=\" \")\n",
+        "        print()\n",
+        "\n",
+        "else:\n",
+        "    print(\"No solution exists.\")"
+      ]
+    }
+  ]
+}
