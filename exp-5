@@ -1,0 +1,92 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNXDwvvpH9ePk9kkKDMDPUy",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/192424249simats-stack/CSA1702AR/blob/main/exp-5\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QRtdsT6I0Iuk",
+        "outputId": "3fcd53fa-f53c-4948-e784-59a3054b10b3"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nested List: [10, 20, [30, 40], 50]\n",
+            "Length of List: 5\n",
+            "Concatenated List: [10, 20, 30, 40, 50, 60, 70]\n",
+            "Is 30 present? True\n",
+            "List elements:\n",
+            "10\n",
+            "20\n",
+            "30\n",
+            "40\n",
+            "50\n",
+            "Element at index 2: 30\n",
+            "Sliced List: [20, 30, 40]\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Python program to implement List operations\n",
+        "\n",
+        "# Creating a list\n",
+        "list1 = [10, 20, 30, 40, 50]\n",
+        "\n",
+        "# 1. Nested List\n",
+        "nested_list = [10, 20, [30, 40], 50]\n",
+        "print(\"Nested List:\", nested_list)\n",
+        "\n",
+        "# 2. Length\n",
+        "print(\"Length of List:\", len(list1))\n",
+        "\n",
+        "# 3. Concatenation\n",
+        "list2 = [60, 70]\n",
+        "print(\"Concatenated List:\", list1 + list2)\n",
+        "\n",
+        "# 4. Membership\n",
+        "print(\"Is 30 present?\", 30 in list1)\n",
+        "\n",
+        "# 5. Iteration\n",
+        "print(\"List elements:\")\n",
+        "for item in list1:\n",
+        "    print(item)\n",
+        "\n",
+        "# 6. Indexing\n",
+        "print(\"Element at index 2:\", list1[2])\n",
+        "\n",
+        "# 7. Slicing\n",
+        "print(\"Sliced List:\", list1[1:4])"
+      ]
+    }
+  ]
+}
